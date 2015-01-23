@@ -2,7 +2,7 @@
 Summary:	Copy to clipboard HTML browser
 Name:		js-%{pkgname}
 Version:	2.2.0
-Release:	1
+Release:	2
 License:	MIT
 Group:		Applications/WWW
 Source0:	https://github.com/zeroclipboard/zeroclipboard/archive/v%{version}/%{pkgname}-%{version}.tar.gz
