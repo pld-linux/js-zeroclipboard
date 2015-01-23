@@ -11,6 +11,7 @@ Source1:	apache.conf
 Source2:	lighttpd.conf
 URL:		http://zeroclipboard.org/
 BuildRequires:	rpmbuild(macros) >= 1.553
+BuildRequires:	sed >= 4.0
 Requires:	webserver(access)
 Requires:	webserver(alias)
 BuildArch:	noarch
@@ -31,8 +32,8 @@ interface is left entirely up to you.
 
 %prep
 %setup -qn %{pkgname}-%{version}
-
 mv dist/ZeroClipboard{,.src}.js
+%{__sed} -i -e '/# sourceMappingURL=/d' dist/ZeroClipboard.min.js
 
 %install
 rm -rf $RPM_BUILD_ROOT
